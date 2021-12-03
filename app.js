@@ -1,10 +1,17 @@
 const express = require("express");
-const port = 80;
+const port = 3000;
 const app = express();
 const path = require("path");
-const publicDir = path.join(__dirname, "public");
 
-app.use(express.static(publicDir));
+//app.use(express.static(publicDir));
+
+app.get("/", (req, res) => res.send("NodeJS on ECS Fargate with CodeDEploy!"));
+
+app.get("/health", (req, res) => {
+    res.status(200);
+    res.send("healthy");
+});
+
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);

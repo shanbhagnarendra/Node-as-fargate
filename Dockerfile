@@ -1,13 +1,11 @@
-FROM node:12.4-alpine
+FROM node:12.18.3-alpine
 
 RUN mkdir /app
 WORKDIR /app
 
-COPY package.json package.json
-RUN npm install && mv node_modules /node_modules
-
+COPY package.json .
+RUN npm install
 COPY . .
-
-LABEL maintainer="Austin Loveless"
-
-CMD node app.js
+RUN npm install pm2 -g
+EXPOSE 3000
+CMD ["pm2-runtime","app.js"]
