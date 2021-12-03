@@ -9,7 +9,7 @@ app.get("/", (req, res) => res.send("NodeJS on ECS Fargate with CodeDEploy!"));
 
 app.get("/health", (req, res) => {
     res.status(200);
-    res.send("healthy");
+    res.send("app is healthy");
 });
 
 
