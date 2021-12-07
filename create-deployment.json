@@ -1,0 +1,13 @@
+{
+  "applicationName": "AppECS-DemoCluster-DemoAppService",
+  "deploymentGroupName": "DgpECS-DemoCluster-DemoAppService",
+  "deploymentConfigName": "CodeDeployDefault.ECSAllAtOnce",
+  "revision": {
+    "revisionType": "S3",
+    "s3Location": {
+      "bucket": "narendra-shanbhag",
+      "key": "appspec.yml",
+      "bundleType": "YAML"
+    }
+  }
+}
