@@ -5,7 +5,7 @@ const path = require("path");
 
 //app.use(express.static(publicDir));
 
-app.get("/", (req, res) => res.send("NodeJS on ECS Fargate with CodeDEploy!"));
+app.get("/", (req, res) => res.send("NodeJS on ECS Fargate with CodeDEploy and Jenkins!"));
 
 app.get("/health", (req, res) => {
     res.status(200);
