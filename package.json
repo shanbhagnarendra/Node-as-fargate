@@ -12,5 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "pm2": "^5.1.2"
+  },
+  "devDependencies": {
+    "mocha-junit-reporter": "^2.0.2"
   }
 }
