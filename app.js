@@ -5,7 +5,7 @@ const path = require("path");
 
 //app.use(express.static(publicDir));
 
-app.get("/", (req, res) => res.send("NodeJS on ECS Fargate Demo with Blue/Green"));
+app.get("/", (req, res) => res.send("Welcome to Blue/Green deployment"));
 
 app.get("/health", (req, res) => {
     res.status(200);
